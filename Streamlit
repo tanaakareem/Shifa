@@ -1,0 +1,34 @@
+import streamlit as st
+
+
+st.title("A Place for Healing")
+
+
+
+Option = st.selectbox (
+    'What state do you live in?',
+    ('Maryland', 'New York', 'California'))
+
+genre = st.radio(
+     "Please choose form of assult so we an best know where to direct you",
+     ('Rape', 'Sexual Harrasment'))
+
+if genre == 'Sexual Harrasment':
+    q = st.radio(
+     "Are You Over 18",
+     ('Yes', 'No'))
+    if q == 'Yes':
+        st.write("www.verywellmind.com/healing-from-sexual-harassment-in-the-workplace-4151996")
+
+    else:
+        st.write("www.childwelfare.gov/pubpdfs/f_abused.pdf")
+if genre == 'Rape':
+    q = st.radio(
+     "Are You Over 18",
+     ('Yes', 'No'))
+    if q == 'Yes':
+        st.write("www.helpguide.org/articles/ptsd-trauma/recovering-from-rape-and-sexual-trauma.htm")
+
+    else:
+        st.write("www.psychologytoday.com/us/blog/the-new-teen-age/201207/7-ways-help-teen-survivor-sexual-assault")
+
